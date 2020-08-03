@@ -17,6 +17,9 @@
     "paths": {
       "@/*": [
         "src/*"
+      ],
+      "*": [
+        "src/*"
       ]
     },
     "lib": [
@@ -24,6 +27,10 @@
       "dom",
       "dom.iterable",
       "scripthost"
+    ],
+    "typeRoots": [
+      "src/customTypings",
+      "node_modules/@types"
     ]
   },
   "include": [
@@ -31,7 +38,8 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "tests/**/*.tsx",
+    "node_modules/@types/svgs/mylib.d.ts"
   ],
   "exclude": [
     "node_modules"
