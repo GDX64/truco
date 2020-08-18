@@ -23,7 +23,11 @@ import Card from "./Card.vue";
 })
 export default class Hand extends Vue {
   @Prop() private msg!: string;
-  cardsList = ["c4D", "cKS", "cTH"];
+  @Prop() private cards!: string[];
+
+  get cardsList() {
+    return this.cards;
+  }
 
   playCard(cardName: string) {
     console.log(cardName);
