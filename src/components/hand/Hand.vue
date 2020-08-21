@@ -15,6 +15,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import Card from "./Card.vue";
+import { socket } from "../../centralSocket";
 
 @Component({
   components: {
@@ -31,8 +32,7 @@ export default class Hand extends Vue {
 
   playCard(cardName: string) {
     console.log(cardName);
-    this.cardsList = this.cardsList.filter((item) => item !== cardName);
-    this.$emit("cardPlayed", cardName);
+    socket.emit("playedCard", { card: cardName });
   }
 }
 </script>
