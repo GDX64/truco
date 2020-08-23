@@ -40,9 +40,20 @@ export default class Hand extends Vue {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .hand {
-  margin-top: 10rem;
+  margin-top: 4rem;
 }
 .cards-container {
   display: flex;
+  justify-content: flex-start;
+  min-width: 50%;
+  max-width: 400px;
+
+  &__play-card {
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-1rem);
+    }
+  }
 }
 </style>

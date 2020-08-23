@@ -23,16 +23,12 @@ export default class Hand extends Vue {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss">
+<style lang="scss" >
 .single-card {
   svg {
-    width: 10rem;
+    width: 100%;
     height: auto;
-    transition: all 0.2s;
     cursor: pointer;
-  }
-  svg:hover {
-    transform: translateY(-1rem);
   }
 }
 </style>
